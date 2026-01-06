@@ -1,164 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="Herbs & Ritual provides intentional, therapeutic home wellness experiences using organic therapeutic oils and natural ritual-based care. Healing begins at home.">
-    
-    <title>Herbs & Ritual | Home Spa Therapy & Apothecary</title>
-    
-    <style>
-        /* THEME COLORS: SAGE GREEN & EARTH TONES */
-        :root {
-            --primary-sage: #7b8e73;
-            --dark-sage: #4a5d45;
-            --light-sage: #f1f3ee;
-            --accent-gold: #d4a373;
-            --text-color: #3a4733;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herbs & Ritual</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f9f9f9;
+    }
 
-        body { 
-            font-family: 'Georgia', serif; 
-            margin: 0; 
-            background-color: var(--light-sage); 
-            color: var(--text-color); 
-            line-height: 1.6; 
-        }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
 
-        header { 
-            background: var(--primary-sage); 
-            color: white; 
-            text-align: center; 
-            padding: 50px 20px; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+    header img {
+      max-width: 120px;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
 
-        .logo {
-            width: 180px;
-            height: auto;
-            margin-bottom: 10px;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
 
-        .container { max-width: 900px; margin: auto; padding: 20px; }
+    nav {
+      background-color: #388E3C;
+      text-align: center;
+      padding: 10px 0;
+    }
 
-        section { 
-            background: white; 
-            padding: 30px; 
-            border-radius: 20px; 
-            margin-bottom: 30px; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
 
-        h2 { color: var(--dark-sage); border-bottom: 2px solid #a3b18a; padding-bottom: 10px; text-transform: uppercase; font-size: 1.3rem; margin-top: 0; }
-        h3 { color: var(--primary-sage); margin: 20px 0 10px; }
-        
-        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9rem; }
-        th { background: var(--primary-sage); color: white; padding: 10px; text-align: left; }
-        td { padding: 10px; border-bottom: 1px solid #eee; }
-        
-        .package-container { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
-        .package-box { background: #fdfaf5; border: 1px solid var(--accent-gold); padding: 15px; border-radius: 10px; text-align: center; }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-        .btn { 
-            background: var(--dark-sage); 
-            color: white !important; 
-            padding: 20px; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            display: block; 
-            text-align: center; 
-            font-weight: bold; 
-            margin-top: 20px;
-        }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
 
-        .contact-card { text-align: center; background: var(--dark-sage); color: white; padding: 30px; border-radius: 20px; }
-        .contact-card a { color: #d4e0d0; text-decoration: none; font-weight: bold; }
+    h2 {
+      color: #2E7D32;
+      margin-bottom: 20px;
+    }
 
-        @media (max-width: 600px) {
-            .package-container { grid-template-columns: 1fr; }
-        }
-    </style>
+    ul, ol {
+      margin-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #C8E6C9;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .cta button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cta button:hover {
+      background-color: #388E3C;
+    }
+
+    footer {
+      background-color: #2E7D32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px){
+      nav a {
+        display: block;
+        margin: 5px 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <img src="logo.png" alt="Herbs & Ritual Logo" class="logo">
-    <p>Healing Begins at Home</p>
+  <img src="logo.png" alt="Herbs & Ritual Logo">
+  <h1>Herbs & Ritual</h1>
+  <p>Where healing becomes a ritual, and wellness begins at home.</p>
 </header>
 
-<div class="container">
+<nav>
+  <a href="#about">About Us</a>
+  <a href="#services">Services</a>
+  <a href="#soaks">Botanical Soaks</a>
+  <a href="#connect">Connect</a>
+  <a href="#book">Book Now</a>
+</nav>
 
-    <section>
-        <h2>About Us</h2>
-        <p>At <strong>Herbs & Ritual</strong>, we believe that true wellness is intentional, natural, and deeply personal. We specialize in therapeutic home service massage using organic therapeutic oils.</p>
-        
-        <h3>Our Mission</h3>
-        <p>To provide intentional, therapeutic home wellness experiences that help individuals restore balance and relieve physical tension.</p>
-    </section>
+<section id="about">
+  <h2>About Us</h2>
+  <p>At <strong>Herbs & Ritual</strong>, we believe that true wellness is intentional, natural, and deeply personal. We specialize in therapeutic home service massage using organic therapeutic oils, alongside handcrafted botanical bath soaks, herbal tea baths, and organic herbal tea blends—all made with 100% natural, organic ingredients and thoughtfully designed to relieve tension, restore balance, and support overall well-being.</p>
+  <p>Each session is carefully customized to the body’s needs, addressing muscle tightness, stress, and physical fatigue through mindful techniques and therapeutic pressure. Our organic therapeutic oils are chosen not only for relaxation, but for their healing and restorative properties that help improve circulation, ease pain, and promote deep relaxation.</p>
+  <p>Inspired by apothecary traditions, Herbs & Ritual brings together therapeutic massage, intentional care, and ritual-based wellness into one meaningful experience. Our approach is gentle yet effective—focused on comfort, care, and long-term wellness rather than quick relief.</p>
+  <p>More than a massage service, Herbs & Ritual is a sanctuary—where organic therapeutic care becomes a ritual, and healing begins at home.</p>
+</section>
 
-    <section>
-        <h2>💆 Treatment Options & Pricing</h2>
-        <table>
-            <tr><th>Body Treatments</th><th>60m</th><th>90m</th><th>120m</th></tr>
-            <tr><td>Classic Swedish</td><td>350</td><td>500</td><td>700</td></tr>
-            <tr><td>Signature Massage</td><td>500</td><td>700</td><td>900</td></tr>
-            <tr><td>Combination Massage</td><td>500</td><td>700</td><td>900</td></tr>
-            <tr><td>Thai Massage / Shiatsu</td><td>400</td><td>600</td><td>800</td></tr>
-            <tr><td>Traditional Hilot</td><td>500</td><td>700</td><td>900</td></tr>
-            <tr><td>Hotstone / Ventosa</td><td>500</td><td>700</td><td>900</td></tr>
-        </table>
-    </section>
+<section id="mission">
+  <h2>Our Mission</h2>
+  <p>Our mission at Herbs & Ritual is to provide intentional, therapeutic home wellness experiences using organic therapeutic oils and natural ritual-based care. We are committed to helping individuals restore balance, relieve physical tension, and support long-term well-being through personalized massage and mindful wellness practices.</p>
+</section>
 
-    <section>
-        <h2>✨ Stress Relief Packages</h2>
-        <div class="package-container">
-            <div class="package-box">
-                <strong>Package 1 - ₱700</strong>
-                <p style="font-size: 0.85rem;">90-Min Signature Massage with Ventosa & Aromatherapy</p>
-            </div>
-            <div class="package-box">
-                <strong>Package 2 - ₱900</strong>
-                <p style="font-size: 0.85rem;">120-Min Relaxation: Deep Tissue, Aromatherapy, Ear Candling & Hot Pack</p>
-            </div>
-        </div>
-    </section>
+<section id="philosophy">
+  <h2>Our Philosophy</h2>
+  <p>At Herbs & Ritual, we believe that healing should be intentional, natural, and deeply respectful of the body’s wisdom. Wellness is not rushed—it is cultivated through mindful touch, organic ingredients, and thoughtful care.</p>
+</section>
 
-    <section>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-            <div style="flex: 1; min-width: 250px;">
-                <h2>🛁 Waxing</h2>
-                <table>
-                    <tr><td>Underarm</td><td>250</td></tr>
-                    <tr><td>Intimate</td><td>500</td></tr>
-                    <tr><td>Full Legs</td><td>800</td></tr>
-                    <tr><td>Full Body</td><td>1000</td></tr>
-                </table>
-            </div>
-            <div style="flex: 1; min-width: 250px;">
-                <h2>🌸 Other Services</h2>
-                <table>
-                    <tr><td>Foot Reflex (60m)</td><td>350</td></tr>
-                    <tr><td>Body Scrub (60m)</td><td>400</td></tr>
-                    <tr><td>Foot Spa (30m)</td><td>250</td></tr>
-                    <tr><td>Ear Candling</td><td>150</td></tr>
-                </table>
-            </div>
-        </div>
-    </section>
+<section id="core-values">
+  <h2>Our Core Values</h2>
+  <ul>
+    <li><strong>Intentional Care:</strong> Every service is delivered with purpose, presence, and mindfulness.</li>
+    <li><strong>Organic Integrity:</strong> We commit to using 100% natural, organic ingredients that support safe, effective therapeutic outcomes.</li>
+    <li><strong>Therapeutic Excellence:</strong> Rooted in proper techniques, personalized assessment, and lasting relief.</li>
+    <li><strong>Respect for the Body:</strong> We honor the body’s natural intelligence through adaptive care.</li>
+    <li><strong>Ritual-Based Wellness:</strong> Wellness is a practice, not a luxury.</li>
+    <li><strong>Comfort & Trust:</strong> Safe, calm, and supportive home service experience.</li>
+  </ul>
+</section>
 
-    <div class="contact-card">
-        <h2>Connect With Us</h2>
-        <p>📞 0961 285 8234 | 0961 633 7759</p>
-        <p>📍 Antipolo, Marikina, Makati, Taguig, BGC, Pasig, Ortigas</p>
-        <a href="https://facebook.com/HerbsandRitualhomespatherapy" target="_blank">Follow us on Facebook</a>
-        <a href="https://m.me/HerbsandRitualhomespatherapy" class="btn" style="background:white; color:var(--dark-sage) !important;">BOOK A RITUAL NOW</a>
-    </div>
+<section id="services">
+  <h2>Signature Massage & Service Menu</h2>
+  <h3>🌟 Signature Packages</h3>
+  <table>
+    <tr>
+      <th>Package</th>
+      <th>Duration</th>
+      <th>Price</th>
+      <th>Bonus</th>
+    </tr>
+    <tr>
+      <td>60-Minute Ritual</td>
+      <td>60 mins</td>
+      <td>₱699</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>90-Minute Ritual</td>
+      <td>90 mins</td>
+      <td>₱1,099</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>120-Minute Ritual</td>
+      <td>120 mins</td>
+      <td>₱1,299</td>
+      <td>🌸 Hua + Salt Bath Soak & 🍵 Herbal Brew Blend</td>
+    </tr>
+  </table>
 
-</div>
+  <h3>💆 Regular Massage Prices</h3>
+  <table>
+    <tr>
+      <th>Service</th>
+      <th>60 mins</th>
+      <th>90 mins</th>
+      <th>120 mins</th>
+    </tr>
+    <tr><td>Classic Swedish</td><td>₱350</td><td>₱500</td><td>₱700</td></tr>
+    <tr><td>Signature Massage</td><td>₱500</td><td>₱700</td><td>₱900</td></tr>
+    <tr><td>Combination Massage</td><td>₱500</td><td>₱700</td><td>₱900</td></tr>
+    <tr><td>Thai Massage</td><td>₱400</td><td>₱600</td><td>₱800</td></tr>
+    <tr><td>Shiatsu</td><td>₱400</td><td>₱600</td><td>₱800</td></tr>
+    <tr><td>Traditional Hilot</td><td>₱500</td><td>₱700</td><td>₱900</td></tr>
+    <tr><td>Aromatherapy Massage</td><td>₱400</td><td>₱600</td><td>₱800</td></tr>
+    <tr><td>Hotstone Massage</td><td>₱500</td><td>₱700</td><td>₱900</td></tr>
+    <tr><td>Ventosa</td><td>₱500</td><td>₱700</td><td>₱900</td></tr>
+  </table>
 
-<footer style="text-align:center; padding: 30px; color: #888; font-size: 0.8rem;">
-    © 2026 Herbs & Ritual | Where healing becomes a ritual.
+  <h3>🛁 Hair Removal Treatments</h3>
+  <ul>
+    <li>Underarm – ₱250</li>
+    <li>Upper Lip – ₱150</li>
+    <li>Intimate – ₱500</li>
+    <li>Full Legs – ₱800</li>
+    <li>Full Arm – ₱700</li>
+    <li>Full Body – ₱1,000</li>
+  </ul>
+
+  <h3>🌸 Other Services</h3>
+  <ul>
+    <li>Foot Reflex – ₱350 / 60 mins</li>
+    <li>Foot Spa – ₱250 / 30 mins</li>
+    <li>Body Scrub – ₱400 / 60 mins</li>
+    <li>Indian Head Massage – ₱250 / 30 mins</li>
+    <li>Back Massage – ₱250 / 30 mins</li>
+    <li>Ear Candling – ₱150</li>
+  </ul>
+</section>
+
+<section id="soaks">
+  <h2>🌿 100% Organic Botanical Bath Soaks</h2>
+  <p>You can purchase our bath soaks separately:</p>
+  <ul>
+    <li>Solo Pack – ₱349</li>
+    <li>Wellness Bundle (3-pack) – ₱942.30 (Save 10%)</li>
+  </ul>
+  <p><strong>Why Upgrade to the Premium Ritual?</strong></p>
+  <ul>
+    <li>100% Organic – real dried flower petals & mineral salts</li>
+    <li>Detoxification – draws out impurities while soaking</li>
+    <li>Muscle Relief – mineral-rich ingredients soothe muscles long after massage</li>
+  </ul>
+</section>
+
+<section id="connect">
+  <h2>Connect With Us</h2>
+  <p>We’d love to guide you on your wellness journey. Reach out anytime for inquiries, bookings, or simply to say hello!</p>
+  <p>📩 Message Us: [Facebook Messenger / WhatsApp link]<br>
+  📞 Call or Text: 0961 285 8234 | 0961 633 7759<br>
+  📧 Email: herbsandritualhomespatherapy@gmail.com<br>
+  📍 Location: Home service available in Antipolo, Marikina, Makati, Taguig, BGC, Pasig, Ortigas</p>
+  <p>Follow us for updates, wellness tips, and special offers:<br>
+  Facebook: <a href="https://facebook.com/HerbsandRitualhomespatherapy">Herbs & Ritual Home Spa Therapy</a></p>
+</section>
+
+<section id="book" class="cta">
+  <h2>Book Your Wellness Ritual</h2>
+  <p>Experience the full Herbs & Ritual Signature Massage or our organic botanical rituals in the comfort of your home. Scheduling is easy!</p>
+  <button onclick="window.location.href='https://www.facebook.com/HerbsandRitualhomespatherapy'">Book Now</button>
+</section>
+
+<footer>
+  <p>Where healing becomes a ritual, and wellness begins at home. 🌿</p>
 </footer>
 
 </body>
