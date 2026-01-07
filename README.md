@@ -31,9 +31,3 @@ The website features a **dark sage green theme**, clean typography, and a respon
 
 ---
 
-## 💻 How to Use / Deploy
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/YOUR-USERNAME/herbs-and-ritual-website.git
